@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --obsidian: #070707;
+  --silver: rgba(255,255,255,0.85);
+  --pink: #ffb6c1;
+}
+
+html, body, #root {
+  background: var(--obsidian);
+  color: white;
+  height: 100%;
+}
+
+.serif-luxury {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.silver-glow {
+  text-shadow: 0 0 24px rgba(255,255,255,0.25);
+}
+
+.obsidian-glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 2rem;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: var(--pink);
+  color: black;
+}

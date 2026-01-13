@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>R2H | Obsidian Culinary Atelier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@100;200;300;400;600&family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #000000;
+            --glass-black: rgba(10, 10, 10, 0.85);
+            --glowing-silver: #E5E4E2;
+            --soft-pink: #FFB6C1;
+        }
+        body {
+            font-family: 'Inter', 'Tajawal', sans-serif;
+            background-color: var(--obsidian);
+            color: var(--glowing-silver);
+            margin: 0; padding: 0;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://nnfx.io/wp-content/uploads/2021/01/noise.png");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .serif-luxury { font-family: 'Cormorant Garamond', serif; }
+        .obsidian-glass {
+            background: var(--glass-black);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .silver-glow { text-shadow: 0 0 20px rgba(229, 228, 226, 0.2); }
+        .pink-focus { color: var(--soft-pink); text-shadow: 0 0 12px rgba(255, 182, 193, 0.3); }
+        .btn-luxury {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+        }
+        .btn-luxury:hover {
+            border-color: var(--soft-pink);
+            background: rgba(255, 182, 193, 0.05);
+            transform: translateY(-2px);
+        }
+        .btn-luxury-active { background: white !important; color: black !important; }
+        .animate-entrance {
+            animation: subtleEntrance 1s ease-out forwards;
+        }
+        @keyframes subtleEntrance {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+<meta
+  http-equiv="Content-Security-Policy"
+  content="
+    default-src 'self' https: data: blob:;
+    script-src 'self' 'unsafe-inline' https:;
+    style-src 'self' 'unsafe-inline' https:;
+    img-src 'self' data: blob: https:;
+    font-src 'self' https:;
+    connect-src 'self' http://localhost:3333 https:;
+  "
+/>
+
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>

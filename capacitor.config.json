@@ -1,0 +1,14 @@
+{
+  "appId": "com.r2h.aicooker",
+  "appName": "R2H.AI-Cooker",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  }
+}
